@@ -1,0 +1,8 @@
+#include<stdio.h>
+void main ()
+{
+int nombre;
+printf("Escribe su nombre usuario: \n");
+scanf("%c", &nombre);
+printf("Su nombre es : %c \n", nombre);
+}
