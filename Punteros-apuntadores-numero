@@ -1,0 +1,11 @@
+#include<stdio.h>
+
+int main(){
+    int num_cuenta;
+    int *P;
+    P = &num_cuenta;
+    printf("Introduce tu número de cuenta: \n");
+    scanf("%i", &num_cuenta);
+    printf("Dirección en memoria de la variable num_cuenta : %x \n, contenido de la variable = %i \n", P, num_cuenta);
+    getchar();
+}
