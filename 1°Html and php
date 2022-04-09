@@ -1,0 +1,23 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bienvenido a mi primer html y php</title>
+    </head>
+    <body>
+        <?php
+        
+        $nombre = "Cecilia denise";
+        $apellido = "Carlota";
+        $edad = 34;
+        $numero_decimal = 109.5;
+        
+        
+        echo "Mi nombre es : $nombre, Mi apellido es : $apellido, mi edad : $edad, mi peso en kilos es: $numero_decimal";
+        
+        echo 'Hola mi nombre es: ' . $nombre , ' Mi apellido es : ' . $apellido, ' Mi edad es: ' . $edad, ' Mi peso en kilos es: ' . $numero_decimal;
+       
+        echo gettype ($numero_decimal);
+        ?>
+    </body>
+</html>
