@@ -1,0 +1,94 @@
+#-*- coding:latin-1 -*-
+import tkinter as tk
+from tkinter import *
+root = Tk()
+    
+def click_boton():
+        numero = [15,16,17,18,19,20]
+        numero = [0],[5]
+        numero = Label(root, text = "Eres buen lector").grid()
+  
+def click_boton2():
+        numero2 = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+        numero2 = [0],[15]
+        numero2 = Label(root, text = "Sigue leyendo").grid() 
+def click_boton3():
+        autor = Label(root, text = "Elegiste bien el autor").grid()
+var = IntVar()
+var2 = IntVar()
+texto= Label(root, text="Bienvenido a la biblioteca central").grid(row=0,column=0)
+numero= str(Entry(root, text="", bg ="white").grid(row=1, column=0))
+numero2 = str(Entry(root, text="", bg ="white").grid(row=2, column=3))
+boton1 = Button(root, text="Cuantos libros leiste ?", bg ="white", padx=12, pady=12, command=click_boton).grid(row=0, column=1)
+boton2 = Button(root, text="Cuantos libros Leiste bien?", bg ="white", padx=12, pady=12, command=click_boton2).grid(row=1, column=1)
+texto1 = Label(root, text="El primer libro se llama algebra de matemáticas").grid(row=2, column=1)
+boton3 = Button(root, text="Autor", bg = "white", padx=12, pady=12, command=click_boton3).grid(row=0,column=3)
+autor = Checkbutton(root, text="Eduardo Espinoza Ramos", variable=var).grid(row=1, column=3)
+autor2 = Checkbutton(root, text="Stanley I.", variable=var2).grid(row=2, column=3)
+root.mainloop()
+def abrir_ventana_secundaria():
+    # Crear una ventana secundaria.
+        ventana_secundaria = tk.Toplevel()
+        ventana_secundaria.title("Biblioteca digital")
+        ventana_secundaria.config(width=350, height=350)
+        tk.Label(ventana_secundaria, text="Qué es una biblioteca digital?", bg= "green", fg= "white").grid(row=0,column=0)
+        tk.Message(ventana_secundaria, text="Las bibliotecas digitales son plataformas en las cuales podemos encontrar distintos tipos de contenidos del estilo de servicios bibliográficos y documentales. Generalmente, los contenidos están dirigidos a una comunidad de usuarios en particular.En una biblioteca digital, todos los derechos de autor de los libros, escritos, artículos y otros tipos de documentos están vigentes.Esta nueva forma de encontrar información hace que la investigación sobre las distintas ciencias sea más efectiva. El material que se puede encontrar en una biblioteca de este estilo pertenece, en su totalidad, al campo de lo digital.Sin embargo, en algunos casos, puede existir la posibilidad de descargar e imprimir los archivos.").grid(row=1, column=0)
+        tk.Message(ventana_secundaria, text="¿Qué bibliotecas digitales existen?", bg= "green", fg= "white").grid(row=2, column=0)
+        tk.Message(ventana_secundaria, text=" Cuando hablamos de bibliotecas digitales debemos hacer una clara diferenciación entre las diferentes formas de acceder a la información que hay en ellas.").grid(row=0, column=1)
+        tk.Label(ventana_secundaria, text="Tipos de libros digitales:", bg="green", fg="white").grid(row=1,column=1)
+        tk.Label(ventana_secundaria, text=" 1) De libre acceso").grid(row=2,column =1)
+        tk.Message(ventana_secundaria, text="1)Entre las más accesibles encontramos a las bibliotecas digitales de libre acceso, que son aquellas a las que cualquiera puede acceder. Es probable que en algunos casos sea necesario crear una cuenta, pero su uso no conlleva limitación alguna.").grid(row=0, column=2)
+        tk.Label(ventana_secundaria, text=" 2) De acceso privado").grid(row=1, column= 2)
+        tk.Message(ventana_secundaria, text="2)Por otro lado, existen bibliotecas digitales privadas, es decir, que restringen su acceso a un determinado grupo de usuarios que pueden estar vinculados por alguna cuestión particular.").grid(row=2,column=2)
+        tk.Label(ventana_secundaria, text=" 3) De acceso gratuito").grid(row=0, column= 3)
+        tk.Message(ventana_secundaria, text="3)Es el caso de las bibliotecas digitales, escolares o universitarias. En su mayoría, estas continúan siendo gratuitas, pero solo podrán acceder quienes sean alumnos de la institución de la cual se trate.Es común que una biblioteca digital de una universidad acote su contenido a lo estudiado en dicho establecimiento. Por ejemplo, la biblioteca de una facultad de medicina probablemente tenga documentos referidos a esa materia de estudio.").grid(row=1,column=3)
+        tk.Label(ventana_secundaria, text=" Ejemplos: Tipos: Epub, Pdf, Comic book").grid(row=2, column=3)
+    # Crear un botón dentro de la ventana secundaria
+    # para cerrar la misma.
+        boton_cerrar = tk.Button(ventana_secundaria,text="Cerrar ventana", command=ventana_secundaria.destroy)
+        boton_cerrar.place(x=500, y=500)
+def abrir_ventana_terciaria():
+    # Crear una ventana secundaria.
+        ventana_terciaria = tk.Toplevel()
+        ventana_terciaria.title("Biblioteca AudioVisual")
+        ventana_terciaria.config(width=300, height=200)
+        tk.Message(ventana_terciaria, text="En segundo lugar, en las bibliotecas digitales podemos encontrar audio libros, los cuales mediante una voz de un locutor profesional relatan el contenido de los libros para que pueda ser oído. Es una buena opción para disfrutar de una novela literaria en un ámbito de relajación.").grid(row=0,column=0)
+        tk.Label(ventana_terciaria, text="Ejemplos de Audio Videos: Audio Mp3, Daisy").grid(row=2,column=0)
+        tk.Label(ventana_terciaria, text="Colecciones").grid(row=0, column=1)
+# Crear un botón dentro de la ventana secundaria
+# para cerrar la misma.
+        boton_cerrar = tk.Button(ventana_terciaria, text="Cerrar ventana", command=ventana_terciaria.destroy)
+        boton_cerrar.place(x=500, y=500)
+def abrir_ventana_cuarta():
+    # Crear una ventana secundaria.
+        ventana_cuarta = tk.Toplevel()
+        ventana_cuarta.title("Ventana cuarta")
+        ventana_cuarta.config(width=300, height=200)
+        tk.Label(ventana_cuarta, text="Programas audiovisuales").grid(row=1,column=0)
+    # Crear un botón dentro de la ventana secundaria
+    # para cerrar la misma.
+        boton_cerrar = tk.Button(ventana_cuarta,text="Cerrar ventana", command=ventana_cuarta.destroy)
+        boton_cerrar.place(x=75, y=75)
+# Crear la ventana principal.
+ventana_principal = tk.Tk()
+# Crear un botón dentro de la ventana principal
+# que al ejecutarse invoca a la función
+# abrir_ventana_secundaria().
+ventana_principal.config(width=400, height=300)
+ventana_principal.title("Ventana principal")
+boton_abrir = tk.Button(ventana_principal,
+    text="Biblioteca digital",
+    command=abrir_ventana_secundaria
+)
+boton_abrir.place(x=100, y=100)
+boton_abrir = tk.Button(ventana_principal,
+    text="Biblioteca AudioVisual",
+    command=abrir_ventana_terciaria
+)
+boton_abrir.place(x=150, y=150)
+boton_abrir = tk.Button(ventana_principal,
+    text="Abrir ventana cuarta",
+    command=abrir_ventana_cuarta
+)
+boton_abrir.place(x=200, y=200)
+ventana_principal.mainloop()
