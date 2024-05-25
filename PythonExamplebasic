@@ -1,19 +1,17 @@
-#-*- coding: latin-1 -*-
+# -*- coding: latin-1 -*-
 import tkinter as tk
-from tkinter import*
-import sqlite3
-win = Tk()
-win.geometry("700x350")
-class Mi_Proceso():
-    def __init__(self):
-        self.edad = edad
-    def Proceso(self):
-        Tk.Label(win, text="¿Cual es tu edad?").pack()
-        Tk.Button(win, text="Tu edad es:", command='Proceso').pack()
-        edad = Tk.Entry(str(root))
-        edad.pack()
-    def ventana(self):
-        self = self
-        self.edad = edad
-        cantidad = int(input("¿Cual es tu edad?"))
-win.mainloop()
+
+ventana = tk.Tk()
+def obtener_texto():
+    texto_ingresado = cuadro_texto.get()
+    etiqueta.config(text="Texto ingresado: " + texto_ingresado)
+
+etiqueta = tk.Label(ventana, text="Cual es tu edad?", bg="white", fg="black", font=("Arial", 16), width=20, height=2, anchor="center")
+etiqueta.pack()
+cuadro_texto = tk.Entry(ventana, width=30)
+cuadro_texto.pack()
+
+boton = tk.Button(ventana, text="Edad:", command=obtener_texto)
+boton.pack()
+
+ventana.mainloop()
