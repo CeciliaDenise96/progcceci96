@@ -39,5 +39,16 @@ for elemento in elementos:
 boton = tk.Button(ventana, text="Obtener", command=obtener_seleccion)
 boton.pack()
 
-ventana.mainloop()
+def obtener_estado():
+    if variable.get() == 1:
+        print("La casilla de verificacion esta seleccionada")
+    else:
+        print("La casilla de verificacion no esta seleccionada")
 
+ventana = tk.Tk()
+
+variable = tk.IntVar()
+
+casilla_verificacion = tk.Checkbutton(ventana, text="Opción 1", variable=variable, command=obtener_estado)
+casilla_verificacion.pack()
+ventana.mainloop()
