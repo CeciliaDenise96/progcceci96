@@ -1,0 +1,12 @@
+class Mi_proceso:
+    def __init__(self,edad):
+        self = self
+        self.edad = edad
+        edad = print("¿Cual es la edad de la persona?");
+        edad = [0,1,2];
+
+        print("Las edades ingresadas fueron:");
+        print("Persona 1:", edad[0]);
+        print("Persona 2:",edad[1]);
+        print("Pesona 3:",edad[2]);
+Mi_proceso(2);
