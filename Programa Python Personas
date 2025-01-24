@@ -1,0 +1,23 @@
+# -*- coding: UTF-8 -*-
+class Persona:
+    def __init__(self,edad,nombre,apellido,localidad):
+        self.edad = edad
+        self.nombre = nombre
+        self.apellido = apellido
+        self.localidad = localidad
+        print("Se ha creado a", self.nombre, "de", self.edad, ", apellido", self.apellido, "y vive en barrio de ", self.localidad)
+    def charlar(self,palabras):
+        print(self.nombre, ":", palabras)
+Cecilia = Persona(36,"Cecilia Denise","Pertuti","Lomas de Zamora")
+Cecilia.charlar("Hola, estoy haciendo Curso Online de Citricultura")
+class Persona2:
+    def __init__(self,edad,nombre,apellido,localidad):
+        self.edad = 30
+        self.nombre = nombre
+        self.apellido = apellido
+        self.localidad = localidad
+        print("Se ha creado a ", self.nombre, "de", self.edad, "y apellido", self.apellido, "y vive en barrio de ", self.localidad)
+    def charlar(self,palabras):
+        print(self.nombre, ":", palabras)
+Lucia = Persona2(30,"Lucia Evelin","Pertuti","Capital Federal")
+Lucia.charlar("Hola, estoy cursando el Curso de Idioma Gales")
