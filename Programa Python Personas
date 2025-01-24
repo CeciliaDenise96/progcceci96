@@ -1,4 +1,19 @@
 # -*- coding: UTF-8 -*-
+import tkinter
+import time
+def funcion():
+    root.iconify
+    time.sleep(5)
+    root.deiconify()
+
+root = tkinter.Tk()
+root.geometry("300x300+0+0")
+root.title("Posicion x=+0 y=+0" "Bienvenido a pagina de Agricultura Natural")
+etiqueta = tkinter.Label(root, text="Posicion x=+0 y=+0", width=100,height= 100,anchor="center")
+boton = tkinter.Button(root, text="Minimizar", command=funcion)
+etiqueta.pack()
+boton.pack()
+root.mainloop()
 class Persona:
     def __init__(self,edad,nombre,apellido,localidad):
         self.edad = edad
@@ -11,8 +26,14 @@ class Persona:
     def charlar2(self, frase,nombre, palabras):
         for frase in palabras:
             print (self.nombre,":", frase)
+    def Deportista(self, deporte):
+       def practicarDeporte(self, deporte):
+           self.deporte = deporte
+           print(self.deporte)
 Cecilia = Persona(36,"Cecilia Denise","Pertuti","Lomas de Zamora")
 Cecilia.charlar("Hola, estoy haciendo Curso Online de Citricultura", "Este soy yo")
+Cecilia.Deportista("Natacion")
+
 class Persona2:
     def __init__(self,edad,nombre,apellido,localidad):
         self.edad = 30
@@ -27,4 +48,3 @@ class Persona2:
             print(self.nombre, ":", frase)
 Lucia = Persona2(30,"Lucia Evelin","Pertuti","Capital Federal")
 Lucia.charlar("Hola, estoy cursando el Curso de Idioma Gales", "Este soy yo")
-
