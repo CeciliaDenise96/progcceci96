@@ -6,10 +6,13 @@ class Persona:
         self.apellido = apellido
         self.localidad = localidad
         print("Se ha creado a", self.nombre, "de", self.edad, ", apellido", self.apellido, "y vive en barrio de ", self.localidad)
-    def charlar(self,palabras):
+    def charlar(self,nombre,palabras):
         print(self.nombre, ":", palabras)
+    def charlar2(self, frase,nombre, palabras):
+        for frase in palabras:
+            print (self.nombre,":", frase)
 Cecilia = Persona(36,"Cecilia Denise","Pertuti","Lomas de Zamora")
-Cecilia.charlar("Hola, estoy haciendo Curso Online de Citricultura")
+Cecilia.charlar("Hola, estoy haciendo Curso Online de Citricultura", "Este soy yo")
 class Persona2:
     def __init__(self,edad,nombre,apellido,localidad):
         self.edad = 30
@@ -17,7 +20,11 @@ class Persona2:
         self.apellido = apellido
         self.localidad = localidad
         print("Se ha creado a ", self.nombre, "de", self.edad, "y apellido", self.apellido, "y vive en barrio de ", self.localidad)
-    def charlar(self,palabras):
+    def charlar(self,nombre,palabras):
         print(self.nombre, ":", palabras)
+    def charlar2(self,frase,nombre,palabras):
+        for frase in palabras:
+            print(self.nombre, ":", frase)
 Lucia = Persona2(30,"Lucia Evelin","Pertuti","Capital Federal")
-Lucia.charlar("Hola, estoy cursando el Curso de Idioma Gales")
+Lucia.charlar("Hola, estoy cursando el Curso de Idioma Gales", "Este soy yo")
+
