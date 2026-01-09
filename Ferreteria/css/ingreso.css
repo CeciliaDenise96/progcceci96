@@ -1,0 +1,128 @@
+/* Importar una fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Para acomodar el header si existe */
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Ajuste para el header si es que flota */
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    padding: 20px;
+}
+
+/* Contenedor del Formulario */
+h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+form {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+}
+
+/* Mensajes de alerta */
+p {
+    background: #ffe5e5;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    border-left: 4px solid #ff4d4d;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Etiquetas e Inputs */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 5px; /* Reducido porque el br ya da espacio */
+    border: 2px solid #eee;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.2);
+}
+
+/* Botón de envío */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #764ba2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #5a3782;
+    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+}
+
+/* Enlace de registro */
+a {
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Quitar los <br> visualmente para mejor control de spacing */
+form br {
+    display: none;
+}
