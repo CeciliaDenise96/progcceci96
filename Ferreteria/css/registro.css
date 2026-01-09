@@ -1,0 +1,99 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9; /* Fondo muy claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar todo el contenido horizontalmente */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+}
+
+/* Estilos para el encabezado (si lo incluyes) */
+/* Asumo que 'header.php' tiene su propio estilo, pero si es un <h1> o similar, podrías añadir algo aquí */
+h2 {
+    color: #333;
+    margin-top: 40px; /* Espacio arriba del título principal */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #5cb85c; /* Un pequeño subrayado verde */
+    padding-bottom: 5px;
+}
+
+/* Estilos para el contenedor principal del formulario */
+form {
+    background-color: #fff; /* Fondo blanco para el formulario */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 400px; /* Limitar el ancho para que no sea demasiado grande */
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Estilos para las etiquetas */
+label {
+    display: block; /* Hace que cada etiqueta ocupe su propia línea */
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Estilos para todos los campos de entrada de texto, email y contraseña */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    width: 100%; /* Ocupa todo el ancho del formulario */
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px; /* Espacio después de cada campo */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    font-size: 16px;
+}
+
+/* Estilos para el botón de registro */
+button[type="submit"] {
+    background-color: #5cb85c; /* Color verde */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+button[type="submit"]:hover {
+    background-color: #4cae4c; /* Verde ligeramente más oscuro al pasar el ratón */
+}
+
+/* Estilos para el enlace de inicio de sesión */
+a {
+    color: #337ab7; /* Color azul estándar para enlaces */
+    text-decoration: none; /* Quitar el subrayado por defecto */
+    margin-bottom: 40px; /* Espacio en la parte inferior */
+}
+
+/* Efecto hover para el enlace */
+a:hover {
+    text-decoration: underline; /* Mostrar subrayado al pasar el ratón */
+}
+
+/* Estilo para mensajes de error o éxito (ej. el mensaje en rojo) */
+p[style*='color:red'] {
+    background-color: #fdd;
+    border: 1px solid #f00;
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 15px;
+}
